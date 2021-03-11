@@ -1,0 +1,25 @@
+const express = require("express");
+const path = require("path");
+const app = express();
+const port = 8000;
+
+//express specific stuff
+app.use('/static',express.static('static')); //serving static files
+app.use(express.urlencoded);
+
+//pug specific stuff
+
+app.get('view engine', 'pug'); //set the template engine as pug
+app.get('views', path.join(__dirname, 'views')) //set views directory
+
+//enpoints like app.get
+app.get('/', (req, res) => {
+    
+    const params = {}
+    res.status(200).render('index.pug' , params);
+});
+
+//starting server
+app.listen(port, () => {
+    console.log(`The application started successfully on port ${port}`);
+});
