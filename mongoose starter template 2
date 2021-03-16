@@ -1,0 +1,45 @@
+// getting-started.js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/saikart', { useNewUrlParser: true, useUnifiedTopology: true });
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
+// db.once('open', function() {
+//   // we're connected!
+//   console.log("we are connected")
+// });
+
+var kittySchema = new mongoose.Schema({
+  name: String
+});
+
+
+kittySchema.methods.speak = function () {
+  var greeting = "my name" + this.name
+  // console.log(greeting);
+}
+
+var Kitten = mongoose.model('saikatKitty', kittySchema); //saving collections
+
+var saikatKitty = new Kitten({ name: 'saikatKitty name' });
+var saikatKitty2 = new Kitten({ name: 'saikatKitty2' });
+
+console.log(saikatKitty.name); //speak function for name
+saikatKitty.speak();
+
+saikatKitty.save(function (err, saikatKitty) {     
+  if (err) return console.error(err);
+  // saikatKitty.speak();
+});                                               //saving a data
+
+saikatKitty2.save(function (err, k) {
+  if (err) return console.error(err);            //saving another data
+  // k.speak();
+});
+
+
+Kitten.find({name: "saikatKitty name"},function (err, kittens) {
+  if (err) return console.error(err);                // finding a data in database
+  console.log(kittens);
+})
