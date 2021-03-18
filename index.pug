@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    style
+        include ../views/style.css
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/">Contact us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+        <h1>Get your supscription now</h1>
+        
+        <form action="/" method="post" id="contact">
+        <input type="text" name="name" id="name" placeholder="enter your name">
+        <input type="text" name="age" id="age" placeholder="enter your age">
+        <input type="text" name="gender" id="gender" placeholder="enter your gender">
+        <textarea name="address" id="address" cols="30" rows="10" placeholder="enter your sddress"></textarea>
+        <textarea name="more" id="more" cols="30" rows="10" placeholder="tell us more about you"></textarea>
+        <button class="btn">submit</button>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
