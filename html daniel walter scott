@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="/images/logo-adare-restaurant.png" alt="logo">
+        </header>
+        <nav></nav>
+
+        <main>
+            <h1>lets meat</h1>
+            <p>If you talk about food just as much as you eat it, you're in good company. We've got famous chefs and
+                stars—Julia Child, Sophia Loren, Virginia Woolf—to thank for some of the greatest food quotes of all
+                time. Do what you will with these: Memorize them, pin them, or print them out and tack them up all over
+                your kitchen.
+           </p>
+           <a href="#" target="_blank">Make a reservation</a>
+        </main>
+        <footer></footer>
+
+
+    </div>
+</body>
+
+</html>
